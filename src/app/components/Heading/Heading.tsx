@@ -10,7 +10,7 @@ const Heading = () => {
                     <Image src="/img/Hand-drawn arrow.png" width={3125} height={125} alt="arrowDown" className="w-[3.5rem] h-[2.25rem] -rotate-30 " />
                 </div>
                 <div>
-                    <p >Available to work</p>
+                    <p className="text-[0.875rem] leading-[1.25rem] font-[600]" >Available to work</p>
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-[1.5rem]">
