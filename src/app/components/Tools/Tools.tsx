@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const Tools = () => {
     return (
-        <div className="py-[8rem] flex flex-col justify-center items-center gap-[2rem]">
+        <div className="py-[8rem] flex flex-col justify-center items-center gap-[2rem]" id="tools">
             <div>
                 <h4 className="uppercase text-[1rem] font-[200] leading-[1.5rem] text-center ">my favorite tools</h4>
             </div>
