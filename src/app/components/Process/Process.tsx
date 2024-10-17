@@ -3,7 +3,7 @@ import ProcessCard from "./ProcessCard";
 
 const Process = () => {
     return (
-        <div className="py-[6.75rem]">
+        <div className="py-[3.75rem]">
             <div className="w-[24.4375rem] space-y-[1.31rem] text-start">
                 <h1 className="text-[4rem] font-[300] leading-[4rem] tracking-[-0.08rem] uppercase ">My process</h1>
                 <p className="text-[1rem] font-[100] leading-[1.5rem]">Our process ensures that we create a User- Centric design tailored to your business goals.</p>

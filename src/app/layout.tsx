@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Container from "./Container";
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 
 
@@ -21,10 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Navigation />
         <Container >
-          <Navigation />
           {children}
         </Container>
+        <Footer />
+
 
       </body>
     </html>
