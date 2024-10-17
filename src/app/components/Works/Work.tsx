@@ -24,7 +24,7 @@ const SelectedWorks = () => {
                     </ul>
                 </div>
             </div>
-            <div>
+            <div className="columns-1 gap-[3rem] md:columns-2 py-[6.25rem]">
                 {projects.map((project) => <ProjectCard key={project.id} project={project} />)}
 
             </div>
@@ -43,16 +43,16 @@ const projects:projectProps[] = [
     },
     {
         id: "2",
-        img: "/img/work2.png",
-        projectName: "Nonkpay Ai Banking Experience",
-        description: "A New AI customisable banking experience",
+        img: "/img/work3.png",
+        projectName: " Everyone's Active App Design",
+        description: "The country's number one activity destination",
         link: "#"
     },
     {
         id: "3",
-        img: "/img/work3.png",
-        projectName: "Everyone's Active App Design",
-        description: "The country's number one activity destination",
+        img: "/img/work2.png",
+        projectName: "Nonkpay Ai Banking Experience",
+        description: " A New AI customisable banking experience",
         link: "#"
     },
     {
