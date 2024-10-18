@@ -9,7 +9,7 @@ import SelectedWorks from "./components/Works/Work"
 export default function Home() {
   return (
     <div>
-      <Heading />
+      <Heading headingLineOne="product designer" headingLineTwo="& web designer" headingDescription="Easily track, analyze, and optimize your investments in real-time. Our intuitive portfolio management tools provide personalized insights, helping you make data-driven decisions to grow your assets." mouseText="Scroll" scrollToLocation="#tools"/>
       <Tools />
       <Services />
       <SelectedWorks />
