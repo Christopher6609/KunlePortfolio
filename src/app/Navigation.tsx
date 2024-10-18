@@ -27,7 +27,7 @@ const Navigation = () => {
                 <button><FontAwesomeIcon icon={faSun} className="w-[1.5rem] h-[1.5rem] " /></button>
             </div>
             <div className="bg-[#0E0E0E] h-full flex items-center px-[1rem] gap-[3.37rem]">
-            <Link href="#heading" >
+            <Link href="/" >
                 <div className="w-[4rem] h-[3.125rem] flex items-center justify-center">
                     <Image src="/img/KO..png" width={400} height={300} alt="KO" className="object-contain" />
                 </div>
@@ -36,7 +36,7 @@ const Navigation = () => {
                     <ul className="list-none text-[#DAC5A7] text-[1rem] leading-[1.5rem] font-[400] flex gap-[1.75rem]">
                         <li className=" px-[0.75rem] py-[0.5rem]"><Link href="#work">Work</Link></li>
                         <li className=" px-[0.75rem] py-[0.5rem]"><Link href="#services">Services</Link></li>
-                        <li className=" px-[0.75rem] py-[0.5rem]"><Link href="#">About Me</Link></li>
+                        <li className=" px-[0.75rem] py-[0.5rem]"><Link href="/profile">About Me</Link></li>
                         <li className=" px-[0.75rem] py-[0.5rem]"><Link href="#">Contact Me</Link></li>
                     </ul>
                 </div>

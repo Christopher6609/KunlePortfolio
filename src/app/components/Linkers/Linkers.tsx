@@ -74,7 +74,7 @@ const Linkers = () => {
 
 export default Linkers;
 
-const links: linkProps[] = [
+const links:linkProps[] = [
     {
         id: 1,
         icon: faBehance,
