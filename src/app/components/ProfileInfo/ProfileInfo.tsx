@@ -1,9 +1,11 @@
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Counter from "./Counter";
 
 type infoProps = {
     id: number,
-    text: string,
+    count: number,
+    countVariable: string,
     subText: string
 }
 
@@ -25,16 +27,9 @@ const ProfileInfo = () => {
             </div>
             <div className="w-full flex justify-between py-[4.44rem] ">
                 {information.map((info) => {
-                    const { id, text, subText } = info
+                    const { id, count, subText, countVariable } = info
                     return (
-                        <div key={id} className="space-y-5 justify-start">
-                            <h1 className="text-[5rem] font-[200] leading-[6rem] ">
-                                {text}
-                            </h1>
-                            <p className="capitalize text-[1.125rem] leading-[1.68rem] font-[500] opacity-[0.8] ">
-                                {subText}
-                            </p>
-                        </div>
+                        <Counter key={id} target={count} duration={1000} subText={subText} countVariable={countVariable} />
                     )
                 })}
             </div>
@@ -48,22 +43,26 @@ export default ProfileInfo;
 const information: infoProps[] = [
     {
         id: 1,
-        text: "3+",
+        count: 3,
+        countVariable: "+",
         subText: "Years of experience"
     },
     {
         id: 2,
-        text: "30+",
+        count: 30,
+        countVariable: "+",
         subText: "designs done"
     },
     {
         id: 3,
-        text: "99%",
+        count: 99,
+        countVariable: "%",
         subText: "customer satisfaction"
     },
     {
         id: 4,
-        text: "200+",
+        count: 200,
+        countVariable: "+",
         subText: "cup of coffee"
     }
 
