@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.liner{
-    border:1px solid black;
+.liner {
+  border: 1px solid black;
 }
 
-.linerred{
-    border:1px solid red;
+.linerred {
+  border: 1px solid red;
 }
 
 html {
-    scroll-behavior: smooth;
-  }
-  
-body{
+  scroll-behavior: smooth;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* body{
     background-color: black;
     color:#DAC5A7;
-}
+} */
