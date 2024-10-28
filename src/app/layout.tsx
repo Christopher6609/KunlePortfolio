@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="dark:bg-[#000] dark:text-[#DAC5A7]">
         <Navigation />
         <Container >
           {children}
