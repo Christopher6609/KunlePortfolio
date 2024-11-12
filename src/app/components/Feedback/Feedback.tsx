@@ -48,7 +48,7 @@ const Feedback = () => {
                     <button onClick={handleNext} className="h-[3.5rem] w-[3.5rem] border border-[#667085] rounded-full flex justify-center items-center"><FontAwesomeIcon icon={faArrowRight} className="w-[1.5rem] h-[1.5rem]" /></button>
                 </div>
                 <div className="justify-end absolute top-0 right-0">
-                    <p className="text-[2.25rem] tracking-[-0.045rem] leading-[2.75rem]">{currentIndex + 1}/{count}</p>
+                    <p className="md:text-[2.25rem] tracking-[-0.045rem] leading-[2.75rem]">{currentIndex + 1}/{count}</p>
                 </div>
             </div>
 
