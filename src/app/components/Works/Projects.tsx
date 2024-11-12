@@ -9,7 +9,11 @@ export type projectProps = {
     projectName: string,
     description: string,
     link: string,
-    category?: string
+    category?: string,
+    client: string,
+    date: string,
+    role: string,
+    website: string,
 }
 
 
@@ -64,14 +68,18 @@ const Projects = () => {
 }
 export default Projects;
 
-const projects: projectProps[] = [
+export const projects: projectProps[] = [
     {
         id: 1,
         img: "/img/work1.png",
         projectName: "begreat finance",
         description: "Web design, Mobile App, Dashboard Design",
         link: "#",
-        category: "web"
+        category: "web",
+        client: "Rey Idowu",
+        date: "March 2023",
+        role: "Product Designer",
+        website: "Betreat Finance"
 
     },
     {
@@ -80,7 +88,11 @@ const projects: projectProps[] = [
         projectName: " Everyone's Active App Design",
         description: "The country's number one activity destination",
         link: "#",
-        category: "web"
+        category: "web",
+        client: "Oladosu Kunle",
+        date: "March 2024",
+        role: "Product Designer",
+        website: "Everyone Active"
     },
     {
         id: 3,
@@ -88,7 +100,11 @@ const projects: projectProps[] = [
         projectName: "Nonkpay Ai Banking Experience",
         description: " A New AI customisable banking experience",
         link: "#",
-        category: "web"
+        category: "web",
+        client: "Bash Alli",
+        date: "April 2023",
+        role: "Product Designer",
+        website: "Nonkpay AI"
     },
     {
         id: 4,
@@ -96,7 +112,11 @@ const projects: projectProps[] = [
         projectName: "Locale travelling App Design",
         description: "A complex travelling app designed for everyone",
         link: "#",
-        category: "web"
+        category: "web",
+        client: "Mike Tyson",
+        date: "May 2023",
+        role: "Product Designer",
+        website: "Locale Travel"
     },
     {
         id: 5,
@@ -104,7 +124,11 @@ const projects: projectProps[] = [
         projectName: "Locale travelling App Design",
         description: "A complex travelling app designed for everyone",
         link: "#",
-        category: "mobile"
+        category: "mobile",
+        client: "Dj Chicken",
+        date: "December 2021",
+        role: "Product Designer",
+        website: "Locale Travel"
     },
     {
         id: 6,
@@ -112,7 +136,11 @@ const projects: projectProps[] = [
         projectName: "Locale travelling App Design",
         description: "A complex travelling app designed for everyone",
         link: "#",
-        category: "mobile"
+        category: "mobile",
+        client: "Chris Morgan",
+        date: "January 2024",
+        role: "Product Designer",
+        website: "Locale Travel"
     },
 
 ]

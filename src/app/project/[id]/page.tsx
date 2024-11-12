@@ -1,14 +1,30 @@
+"use client"
+
 import Feedback from '@/app/components/Feedback/Feedback'
 import React from 'react'
+import { useParams } from 'next/navigation'
+import { projects } from '@/app/components/Works/Projects';
+
+
 
 const page = () => {
+
+    const { id } = useParams();
+    const project = projects.find((project) => project.id === Number(id))
+
+    if (!project) {
+        return <div>Project not found</div>
+    }
+
+    const { projectName, client, date, role, website } = project
+
     return (
         <div className="mt-[6rem]">
             <div className="h-[43.8125rem]"></div>
             <div className='md:flex py-[5rem] items-center justify-between'>
                 <div className='space-y-[1.5rem] md:w-[28rem] '>
                     <button className={`border text-[0.875rem] border-[#DAC5A7] py-[0.25rem] px-[0.5rem] bg-[#DAC5A7] rounded text-[#000] hover:text-[#000] hidden md:block`}>Web 3</button>
-                    <h1 className='md:text-[3.5rem] text-[2.5rem] md:text-start text-center md:leading-[4.2rem] leading-[3rem] font-[500]'>Begreat Finance Management</h1>
+                    <h1 className='md:text-[3.5rem] text-[2.5rem] md:text-start text-center md:leading-[4.2rem] leading-[3rem] font-[500] uppercase'>{projectName}</h1>
                     <p className='text-[1rem] leading-[1.5rem] font-[200] hidden md:block'>Web-design, Mobile App, Dashboard design</p>
                     <div className=' md:hidden space-y-[1.5rem] pb-[2rem]'>
                         <p className='text-[1rem] leading-[1.5rem]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. </p>
@@ -24,21 +40,21 @@ const page = () => {
                     <div className='flex justify-between'>
                         <div className='w-[13.5rem]'>
                             <h2 className='text-[1.25rem] leading-[1.75rem] font-[500]'>Client</h2>
-                            <p className='text-[1rem] leading-[1.5rem] font-[200] '>Rey Idowu</p>
+                            <p className='text-[1rem] leading-[1.5rem] font-[200] '>{client}</p>
                         </div>
                         <div className='w-[13.5rem]'>
                             <h2 className='text-[1.25rem] leading-[1.75rem] font-[500]'>Date</h2>
-                            <p className='text-[1rem] leading-[1.5rem] font-[200] '>March 2023</p>
+                            <p className='text-[1rem] leading-[1.5rem] font-[200] '>{date}</p>
                         </div>
                     </div>
                     <div className='flex justify-between'>
                         <div className='w-[13.5rem]'>
                             <h2 className='text-[1.25rem] leading-[1.75rem] font-[500]'>Role</h2>
-                            <p className='text-[1rem] leading-[1.5rem] font-[200] '>Product Designer</p>
+                            <p className='text-[1rem] leading-[1.5rem] font-[200] '>{role}</p>
                         </div>
                         <div className='w-[13.5rem]'>
                             <h2 className='text-[1.25rem] leading-[1.75rem] font-[500]'>Website</h2>
-                            <p className='text-[1rem] leading-[1.5rem] font-[200] '><a href="#">Befreat Finance</a></p>
+                            <p className='text-[1rem] leading-[1.5rem] font-[200] '><a href="#">{website}</a></p>
                         </div>
                     </div>
                 </div>
