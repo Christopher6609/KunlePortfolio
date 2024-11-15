@@ -10,28 +10,28 @@ export interface serviceData {
 
 const Services = () => {
     return (
-        <div className="py-[6.56rem] space-y-[3.31rem]" id="services">
+        <div className="py-[6.56rem] md:space-y-[3.31rem] space-y-4" id="services">
             <div className="flex justify-between items-center">
                 <div>
-                    <h1 className="text-[4rem] font-[300] leading-[4rem] tracking-[-0.08rem] uppercase ">my services</h1>
+                    <h1 className="md:text-[4rem] text-[2rem] font-[300] md:leading-[4rem] tracking-[-0.08rem] uppercase ">my services</h1>
                 </div>
-                <div className="flex px-[2rem]">
+                <div className="md:flex px-[2rem] hidden">
                     <div className="pt-[1rem]">
-                        <Image src="/img/Hand-drawn arrow.png" width={3125} height={125} alt="arrowDown" className="w-[3.5rem] h-[2.25rem] -rotate-30 " />
+                        <Image src="/img/Hand-drawn arrow.png" width={3125} height={125} alt="arrowDown" className="md:w-[3.5rem] w-[1.5rem] md:h-[2.25rem] h-[1rem] -rotate-30 " />
                     </div>
                     <div>
-                        <p className="text-[0.875rem] leading-[1.25rem] font-[600] ">Available to work</p>
+                        <p className="text-[0.875rem] md:leading-[1.25rem] font-[600] ">Available to work</p>
                     </div>
                 </div>
             </div>
-            <div className="flex gap-[1.25rem]">
+            <div className="md:flex  gap-[1.25rem] space-y-8 md:space-y-0">
                 {
                     services.map((service) => <Service key={service.id} service={service} />)
                 }
 
             </div>
             <div className="flex justify-center items-center">
-                <a href="mailto:odeniyichristopher7@gmail.com" className="w-[7.5625rem] h-[3.0625rem] px-[0.75rem] py-[0.5rem] flex justify-center items-center rounded bg-[#EDD6B6] text-[#000] text-[1.21875rem] leading-[1.5rem] font-[500] tracking-[0.01831rem] hover:bg-transparent hover:text-[#EDD6B6] hover:border-[#EDD6B6] hover:border ">Hire Me </a>
+                <a href="mailto:odeniyichristopher7@gmail.com" className="md:w-[7.5625rem] w-[5rem] md:h-[3.0625rem] h-[2rem] md:px-[0.75rem] md:py-[0.5rem] flex justify-center items-center rounded bg-[#EDD6B6] text-[#000] md:text-[1.21875rem] text-[0.875rem]leading-[1.5rem] md:font-[500] tracking-[0.01831rem] hover:bg-transparent hover:text-[#EDD6B6] hover:border-[#EDD6B6] hover:border ">Hire Me </a>
             </div>
         </div>
     )
