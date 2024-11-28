@@ -18,18 +18,21 @@ const Linkers = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between" id="contact">
             <div className="lg:w-[58.3125rem] ">
-                <p className="text-[1.5rem] font-[100] leading-8">Have a Project in Mind?</p>
-                <h1 className="uppercase text-[6rem] font-[300] leading-[6rem] tracking-tight">Let's create things together</h1>
-                <div className="py-[3.25rem] flex gap-8 ">
+                <p className="text-[1.5rem] font-[100] md:leading-8">Have a Project in Mind?</p>
+                <h1 className="uppercase md:text-[6rem] text-[3rem] font-[300] md:leading-[6rem] tracking-tight">Let's create things together</h1>
+                <div className="flex justify-start items-center md:hidden">
+                <a href="mailto:odeniyichristopher7@gmail.com" className="md:w-[7.5625rem] w-[5rem] md:h-[3.0625rem] h-[2rem] md:px-[0.75rem] md:py-[0.5rem] flex justify-center items-center rounded bg-[#EDD6B6] text-[#000] md:text-[1.21875rem] text-[0.875rem]leading-[1.5rem] md:font-[500] tracking-[0.01831rem] hover:bg-transparent hover:text-[#EDD6B6] hover:border-[#EDD6B6] hover:border ">Hire Me </a>
+            </div>
+                <div className="py-[3.25rem] flex md:gap-8 gap-2 ">
                     {links.map((link) => {
-                        return (
-                            <Link href={link.link} target="_blank" key={link.id}><div className=" flex items-center gap-[0.5rem]">
-                                <div className="w-[2.5rem] h-[2.5rem] rounded-full border-[0.613px] border-[#DAC5A7] p-[0.6125rem] flex items-center">
-                                    <FontAwesomeIcon icon={link.icon} className="w-[1.8375rem]" />
+                        return ( 
+                            <Link href={link.link} target="_blank" key={link.id}><div className=" flex items-center md:gap-[0.5rem] gap-[0.25rem]">
+                                <div className="md:w-[2.5rem] md:h-[2.5rem] w-[1.5rem] h-[1.5rem] rounded-full border-[0.613px] border-[#DAC5A7] md:p-[0.6125rem] p-[0.3rem] flex items-center">
+                                    <FontAwesomeIcon icon={link.icon} className="md:w-[1.8375rem] w-[0.8rem]" />
                                 </div>
-                                <p className="text-[1rem] leading-8 font-[200]">{link.desc}</p>
+                                <p className="md:text-[1rem] text-[0.8rem] md:leading-8 font-[200]">{link.desc}</p>
                             </div></Link>
                         )
                     })}
@@ -37,7 +40,7 @@ const Linkers = () => {
 
                 </div>
             </div>
-            <div>
+            <div className=" hidden md:flex">
                 <Link href="mailto:odeniyichristopher7@gmail.com"><div className="w-[10.875rem] h-[10.875rem] rounded-full border border-[#DAC5A7] flex items-center justify-center transition-all duration-300 ease-in-out" onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)} style={{ backgroundColor: isHovered ? "#DAC5A7" : "transparent", transition: "background-color 0.3s ease-in-out" }}>
                     {

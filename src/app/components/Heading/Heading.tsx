@@ -11,7 +11,7 @@ type headingProps = {
 
 const Heading = ({ headingLineOne, headingLineTwo, headingDescription, mouseText, scrollToLocation }: headingProps) => {
     return (
-        <div className="md:pt-[15.94rem] mt-[10rem]" id="heading">
+        <div className="md:pt-[10.94rem] mt-[10rem]" id="heading">
 
             <div className="flex flex-col items-center justify-center gap-[1.5rem]">
                 <div className="md:flex md:px-[2rem]  hidden  ">
