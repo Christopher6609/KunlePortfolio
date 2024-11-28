@@ -39,20 +39,28 @@ const Projects = () => {
     }
 
     return (
-        <div className="py-[11.94rem]" id="work">
+        <div className="md:py-[11.94rem] py-[4rem]" id="work">
             <div className="flex justify-between items-center">
                 <div>
-                    <h1 className="text-[4rem] font-[300] leading-[4rem] tracking-[-0.08rem] uppercase ">Selected Works</h1>
+                    <h1 className="md:text-[4rem] text-[2rem] font-[300] leading-[4rem] tracking-[-0.08rem] uppercase ">Selected Works</h1>
                 </div>
-                <div>
-                    <ul className="list-none text-[#DAC5A7] text-[1rem] leading-[1.5rem] font-[200] flex gap-[1.75rem]">
+                <div className="hidden md:flex">
+                    <ul className="list-none text-[#DAC5A7] md:text-[1rem] text-[0.875rem] leading-[1.5rem] font-[200] flex gap-[1.75rem]">
                         <li className=" px-[0.75rem] py-[0.5rem]"><button onClick={() => filterProjects("web")} className={`${activeButton("web")} border border-[#DAC5A7] py-[1rem] px-[0.875rem] rounded hover:bg-[#DAC5A7] hover:text-[#000]`}>Web Design</button></li>
                         <li className=" px-[0.75rem] py-[0.5rem]"><button onClick={() => filterProjects("mobile")} className={`${activeButton("mobile")} border border-[#DAC5A7] py-[1rem] px-[0.875rem] rounded hover:bg-[#DAC5A7] hover:text-[#000]`}>Mobile App Design</button></li>
                         <li className=" px-[0.75rem] py-[0.5rem]"><button onClick={() => filterProjects("case")} className={`${activeButton("case")} border border-[#DAC5A7] py-[1rem] px-[0.875rem] rounded hover:bg-[#DAC5A7] hover:text-[#000]`}>Case Studies</button></li>
                     </ul>
                 </div>
+                
             </div>
-            <div className="columns-1 gap-[3rem] md:columns-2 py-[6.25rem]">
+            <div className="md:hidden flex">
+                    <ul className="list-none text-[#DAC5A7] md:text-[1rem] text-[0.6rem] md:leading-[1.5rem] font-[100] flex gap-[0.75rem] ">
+                        <li><button onClick={() => filterProjects("web")} className={`${activeButton("web")} border border-[#DAC5A7] py-[0.5rem] px-[0.5rem] rounded hover:bg-[#DAC5A7] hover:text-[#000]`}>Web Design</button></li>
+                        <li><button onClick={() => filterProjects("mobile")} className={`${activeButton("mobile")} border border-[#DAC5A7] py-[0.5rem] px-[0.5rem] rounded hover:bg-[#DAC5A7] hover:text-[#000]`}>Mobile App Design</button></li>
+                        <li><button onClick={() => filterProjects("case")} className={`${activeButton("case")} border border-[#DAC5A7] py-[0.5rem] px-[0.5rem] rounded hover:bg-[#DAC5A7] hover:text-[#000]`}>Case Studies</button></li>
+                    </ul>
+                </div>
+            <div className="columns-1 gap-[3rem] md:columns-2 md:py-[6.25rem] py-[3rem]">
                 {filteredProjects.map((project) => {
                     return (
 
