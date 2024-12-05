@@ -18,7 +18,7 @@ const Linkers = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className="flex items-center justify-between" id="contact">
+        <div className="flex items-center justify-between md:pt-[6rem]" id="contact">
             <div className="lg:w-[58.3125rem] ">
                 <p className="text-[1.5rem] font-[100] md:leading-8">Have a Project in Mind?</p>
                 <h1 className="uppercase md:text-[6rem] text-[3rem] font-[300] md:leading-[6rem] tracking-tight">Let's create things together</h1>

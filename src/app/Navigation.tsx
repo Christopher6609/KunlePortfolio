@@ -20,6 +20,11 @@ const Navigation = () => {
         setNavView(nav)
     }
 
+    const closeNavToggle = () => {
+        setNavView("top-[-50rem]");
+        setNavIcon(faBars);
+    }
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
@@ -89,12 +94,12 @@ const Navigation = () => {
                     <div className="flex items-center justify-center hover:cursor-pointer md:hidden">
                         <FontAwesomeIcon onClick={navToggle} icon={navIcon} className="w-[2.5rem] h-[2.5rem]"/>
                     </div>
-                    <div className={`absolute md:static min-h-[30vh] md:min-h-fit w-full md:w-auto left-0 px-2 flex duration-500 text-center items-center  ${navView} ${theme === "dark" ? "bg-[#000] " :"bg-[#DAC5A7] md:bg-[#000] md:text-[#DAC5A7] text-[#000]" }`} >
+                    <div className={`absolute md:static min-h-[30vh] md:min-h-fit w-full md:w-auto left-0 px-2 flex duration-500 text-center items-center  ${navView} ${theme === "dark" ? "bg-[#0E0E0E] " :"bg-[#DAC5A7] md:bg-[#000] md:text-[#DAC5A7] text-[#000]" } `} >
                         <ul className="list-none  text-[1rem] leading-[1.5rem] font-[400] flex md:flex-row flex-col gap-[1.75rem]  w-full">
-                            <li className=" px-[0.75rem] py-[0.5rem]"><Link href="#work">Work</Link></li>
-                            <li className=" px-[0.75rem] py-[0.5rem]"><Link href="#services">Services</Link></li>
-                            <li className=" px-[0.75rem] py-[0.5rem]"><Link href="/profile">About Me</Link></li>
-                            <li className=" px-[0.75rem] py-[0.5rem]"><Link href="#contact">Contact Me</Link></li>
+                            <li className=" px-[0.75rem] py-[0.5rem]"><Link onClick={closeNavToggle} href="#work">Work</Link></li>
+                            <li className=" px-[0.75rem] py-[0.5rem]"><Link onClick={closeNavToggle} href="#services">Services</Link></li>
+                            <li className=" px-[0.75rem] py-[0.5rem]"><Link onClick={closeNavToggle} href="/profile">About Me</Link></li>
+                            <li className=" px-[0.75rem] py-[0.5rem]"><Link onClick={closeNavToggle} href="#contact">Contact Me</Link></li>
                         </ul>
                     </div>
 
